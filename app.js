@@ -1,13 +1,8 @@
-const hi = document.querySelector("div.hello:first-child h1");
-hi.innerText = "Click Me";
+const h1 = document.querySelector("div.hello:first-child h1");
+h1.innerHTML = "Eat Me";
 
 function handleTitleClick() {
-  const clickedClass = "clicked";
-  if (hi.className === clickedClass) {
-    hi.className = "";
-  } else {
-    hi.className = clickedClass;
-  }
+  h1.classList.toggle("clicked");
 }
 
-hi.addEventListener("click", handleTitleClick);
+h1.addEventListener("click", handleTitleClick);
