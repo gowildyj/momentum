@@ -1,14 +1,13 @@
-const title = document.querySelector(".hello");
-title.innerText = "Click Me";
+const hi = document.querySelector("div.hello:first-child h1");
+hi.innerText = "Click Me";
 
 function handleTitleClick() {
-  const currentColor = title.style.color;
-  let newColor;
-  if (currentColor === "blue") {
-    newColor = "tomato";
+  const clickedClass = "clicked";
+  if (hi.className === clickedClass) {
+    hi.className = "";
   } else {
-    newColor = "blue";
+    hi.className = clickedClass;
   }
-  title.style.color = newColor;
 }
-title.addEventListener("click", handleTitleClick);
+
+hi.addEventListener("click", handleTitleClick);
